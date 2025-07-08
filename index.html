@@ -1,95 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HYP Token | Official Website</title>
-  <meta name="description" content="Official website of HYP token (HYPRA) on Binance Smart Chain. Fair launch, anti-whale, and halal tokenomics.">
-  <meta name="keywords" content="HYP, HYPRA token, BEP20, BNB, crypto, halal token, anti-whale, auto-burn">
-  <meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HYP Token | Halal Community Crypto Project</title>
+  <meta name="description" content="HYP is a BEP-20 token built with fairness and halal principles. Explore our tokenomics, roadmap, and how to buy." />
+  <link rel="icon" href="logo.png" type="image/png">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0e0e0e;
-      color: #ffffff;
+      font-family: Arial, sans-serif;
+      background-color: #0b0b0b;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    header {
-      padding: 40px 20px;
+    header, footer {
+      background-color: #111;
+      padding: 1rem;
       text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    nav {
+      text-align: center;
+      background-color: #222;
+      padding: 0.5rem 0;
+      animation: slideInDown 1s ease-out;
+    }
+    nav a {
+      color: #00ffc8;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1, h2, h3 {
+      color: #00ffc8;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .token-section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid #222;
+      border-radius: 10px;
       background: #1a1a1a;
+      animation: zoomIn 0.7s ease;
     }
-    h1 {
-      font-size: 3em;
-      color: #00ffcc;
+    code {
+      background: #333;
+      padding: 2px 6px;
+      border-radius: 4px;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+    a {
+      color: #00ffc8;
     }
-    .btn {
-      background-color: #00ffcc;
+    ul {
+      padding-left: 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #141414;
+      animation: slideInUp 1s ease-out;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero .btn {
+      background: #00ffc8;
       color: #000;
-      padding: 10px 25px;
+      padding: 0.5rem 1.5rem;
       border: none;
       font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
     }
-    .tokenomics {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
+    .hero .btn:hover {
+      background: #00c2a1;
     }
     footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #aaa;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>HYP Token</h1>
-    <p>Built for fair trading. Powered by the community. Designed to be halal.</p>
-    <button class="btn" onclick="window.location.href='https://pancakeswap.finance/swap'">Buy Now</button>
+    <p>Built for fair trading. Powered by the community.</p>
   </header>
 
-  <section>
-    <h2>About HYP</h2>
-    <p>HYP is a decentralized BEP-20 token on the Binance Smart Chain (BSC), launched with the goal of creating a fair and secure crypto asset aligned with Islamic values. It features anti-whale, auto-burn, and cooldown systems to prevent abuse and manipulation.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#howtobuy">Buy</a>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="#community">Community</a>
+    <a href="#education">Learn</a>
+  </nav>
+
+  <section class="hero" id="about">
+    <h1>Welcome to HYP Token</h1>
+    <p>Secure. Community-Driven. Future-Focused.</p>
+    <a href="#howtobuy" class="btn">Buy Now</a>
   </section>
 
-  <section class="tokenomics">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li><strong>Total Supply:</strong> 10,000,000 HYP</li>
-      <li><strong>Buy Tax:</strong> 0.5%</li>
-      <li><strong>Sell Tax:</strong> 1.0%</li>
-      <li><strong>Auto-Burn:</strong> 0.2% per transfer</li>
-      <li><strong>Max Wallet:</strong> 2% of supply</li>
-      <li><strong>Max Tx Limit:</strong> 1% of supply</li>
-      <li><strong>Cooldown:</strong> 60 seconds between trades</li>
-      <li><strong>Contract Address:</strong> <code>0xCB12f602c4511d5a356636d6Ff2A6BB11a91116c</code></li>
-    </ul>
-  </section>
+  <div class="container" id="features">
+    <h2>🌟 Key Features</h2>
+    <div class="token-section">
+      <h3>🔐 Wallet Integration</h3>
+      <p>Connect securely with MetaMask or other wallets to manage your HYP tokens easily.</p>
+    </div>
+    <div class="token-section">
+      <h3>📊 Real-Time Price Tracking</h3>
+      <p>Live HYP price data powered by DEXTools for transparency and informed trading.</p>
+    </div>
+    <div class="token-section">
+      <h3>🛍️ Buy & Sell with Ease</h3>
+      <p>Integrated steps to purchase HYP tokens directly using PancakeSwap or similar platforms.</p>
+    </div>
+    <div class="token-section">
+      <h3>🔒 Security First</h3>
+      <p>Protect user data and assets with robust security features like two-factor authentication and secure transaction protocols.</p>
+    </div>
+    <div class="token-section">
+      <h3>📚 Educational Resources</h3>
+      <p>Understand the token, blockchain basics, smart contracts, and how to stay safe in crypto through clear educational content.</p>
+    </div>
+    <div class="token-section">
+      <h3>💬 Community Engagement</h3>
+      <p>Join the growing HYP community on Telegram and Twitter. Engage in discussions, vote on updates, and share ideas!</p>
+    </div>
+  </div>
 
-  <section>
-    <h2>Roadmap</h2>
-    <ul>
-      <li>✅ Smart Contract Deployed</li>
-      <li>🔒 Liquidity Locked with PinkLock</li>
-      <li>📣 DEXTools & CoinMarketCap Listing</li>
-      <li>🤝 Community Building & Marketing</li>
-      <li>🕌 Halal Crypto Ecosystem Expansion</li>
-    </ul>
-  </section>
+  <div class="container" id="education">
+    <h2>📘 Learn About HYP & Blockchain</h2>
+    <div class="token-section">
+      <h3>What is a BEP-20 Token?</h3>
+      <p>BEP-20 is a token standard on Binance Smart Chain, allowing smart contract-based tokens like HYP to operate seamlessly across dApps and exchanges.</p>
+
+      <h3>Why Blockchain Matters</h3>
+      <p>Blockchain technology ensures transparency, security, and decentralization. HYP uses this technology to offer a fair financial experience.</p>
+
+      <h3>How Does HYP Ensure Fairness?</h3>
+      <p>By implementing anti-whale logic, cooldown times, and community control mechanisms, HYP is built to protect holders and prevent manipulation.</p>
+    </div>
+  </div>
 
   <footer>
-    <p>© 2025 HYP Token. Built with honesty and trust.</p>
+    <p>&copy; 2025 HYP Token. All rights reserved.</p>
   </footer>
 </body>
 </html>
